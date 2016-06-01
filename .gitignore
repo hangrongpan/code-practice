@@ -1,0 +1,6 @@
+.metadata
+.recommenders
+*.class
+*.swp
+.settings/
+/bin/
