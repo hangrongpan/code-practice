@@ -1,4 +1,6 @@
-import java.utils.*;
+package leetcode3;
+
+import java.util.*;
 
 class CombinationSum_39 {
 	public ArrayList<ArrayList<Integer>> solution(int[] candidates, int target) {
