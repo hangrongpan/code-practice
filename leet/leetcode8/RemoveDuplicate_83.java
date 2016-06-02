@@ -1,7 +1,5 @@
 package leetcode8;
 
-
-
 class RemoveDuplicate_83 {
 	private class ListNode {
 		int val;
