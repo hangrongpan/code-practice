@@ -1,0 +1,15 @@
+1. N 皇后问题，backtraking
+2. 问题是基于 36 isvalid sudoku的
+3. should be very straight forward.
+
+Method boolean helper(char[][] board)
+	IF isValid(borad, row, col, num)
+		fillin num to board
+		IF helper(board)
+			return true -> so the recursion could continue.
+		ESLE
+			fillin '.' to board backtracking. 	
+
+
+Method boolean isValid(char[][] board, int row, int col, int num)
+	implementation is based on 36.
