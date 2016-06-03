@@ -3,7 +3,7 @@ package leetcode8;
 import java.util.*;
 
 
-class LargetRec_84 {
+class LargestRec_84 {
 	public int solution(int[] heights) {
 		if (heights == null || heights.length == 0) {
 			return 0;
