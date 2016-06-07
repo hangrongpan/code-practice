@@ -158,4 +158,97 @@ public class BinarySearchSummary {
             return num[end];
         }
     }
+
+    /**
+     * 6. Find peak element. Where A[P] > A[P-1] && A[P] > A[P+1]
+     */
+    public int findPeak(int[] A) {
+        if (A == null || A.length <= 2) {
+            return -1;
+        }
+        int start = 0;
+        int end = A.length - 2;
+        // find first element which matches the condition
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (A[mid] < A[mid - 1]) {
+                end = mid;
+            } else if (A[mid] < A[mid + 1]){
+                start = mid;
+            } else {
+                end = mid;
+            }
+        }
+        if (A[start] <= A[end]) {
+            return end;
+        } else {
+            return start;
+        }
+    }
+
+    /**
+     * 7. First bad version.
+     */
+    public int findFirstBadVersion(int n) {
+        if (n == 0) {
+            return -1;
+        }
+        int start = 0;
+        int end = n;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (SVNRepo.isBadVersion(mid)) {
+                end = mid;
+            } else {
+                start = mid;
+            }
+        }
+        if (SVNRepo.isBadVersion(start)) {
+            return start;
+        }
+        return end;
+    }
+
+    /**
+     * 8. Search in rotated sorted array.
+     */
+    public int search(int[] A, int target) {
+        if (A == null || A.length == 0) {
+            return -1;
+        }
+        int start = 0;
+        int end = A.length - 1;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (A[mid] < A[end]) {
+                if (target >= A[mid] && target <= A[end]) {
+                    start = mid;
+                } else {
+                    end = mid;
+                }
+            } else { // A[mid] > A[start]
+                if (target >= A[start] && target <= A[mid]) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            }
+        }
+        if (A[start] == target) {
+            return start;
+        } else if (A[end] == target) {
+            return end;
+        } else {
+            return -1;
+        }
+    }
+}
+
+/**
+ * Helper class for 7. First bad version
+ */
+class SVNRepo {
+    public static boolean isBadVersion(int k) {
+        return false;
+    }
 }
