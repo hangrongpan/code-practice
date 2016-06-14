@@ -1,0 +1,8 @@
+1. initial state
+    第一行和第一列
+2. state 当前位置所需要的min sum
+    int[][] f = new int[m][n]
+3. dp function
+    f[i][j] = Math.min(f[i-1][j], f[i][j-1]) + grid[i][j]
+4. final staet
+    return the last position: f[m-1][n-1]
