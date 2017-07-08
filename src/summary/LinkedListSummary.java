@@ -22,7 +22,7 @@ import java.util.Stack;
  *
  */
 public class LinkedListSummary {
-
+	// test
 	public static void main(String[] args) {
 		Node n1 = new Node(1);
 		Node n2 = new Node(2);
