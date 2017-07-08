@@ -6,16 +6,20 @@ import java.util.Stack;
 /**
  * http://blog.csdn.net/luckyxiaoqiang/article/details/7393134 轻松搞定面试中的链表题目
  * http://www.cnblogs.com/jax/archive/2009/12/11/1621504.html 算法大全（1）单链表
- * 
- * 目录： 1. 求单链表中结点的个数: getListLength 2. 将单链表反转:
- * reverseList（遍历），reverseListRec（递归） 3. 查找单链表中的倒数第K个结点（k > 0）: reGetKthNode 4.
- * 查找单链表的中间结点: getMiddleNode 5. 从尾到头打印单链表:
- * reversePrintListStack，reversePrintListRec（递归） 6. 已知两个单链表pHead1 和pHead2
- * 各自有序，把它们合并成一个链表依然有序: mergeSortedList, mergeSortedListRec 7. 判断一个单链表中是否有环:
- * hasCycle 8. 判断两个单链表是否相交: isIntersect 9. 求两个单链表相交的第一个节点: getFirstCommonNode
- * 10. 已知一个单链表中存在环，求进入环中的第一个节点: getFirstNodeInCycle, getFirstNodeInCycleHashMap
- * 11. 给出一单链表头指针pHead和一节点指针pToBeDeleted，O(1)时间复杂度删除节点pToBeDeleted: delete
- * 
+ *
+ * 目录：
+ 1. 求单链表中结点的个数: getListLength
+ 2. 将单链表反转: reverseList（遍历），reverseListRec（递归）
+ 3. 查找单链表中的倒数第K个结点（k > 0）: reGetKthNode
+ 4.查找单链表的中间结点: getMiddleNode
+ 5. 从尾到头打印单链表: reversePrintListStack，reversePrintListRec（递归）
+ 6. 已知两个单链表pHead1 和pHead2 各自有序，把它们合并成一个链表依然有序: mergeSortedList, mergeSortedListRec
+ 7. 判断一个单链表中是否有环: hasCycle
+ 8. 判断两个单链表是否相交: isIntersect
+ 9. 求两个单链表相交的第一个节点: getFirstCommonNode
+ 10. 已知一个单链表中存在环，求进入环中的第一个节点: getFirstNodeInCycle, getFirstNodeInCycleHashMap
+ 11. 给出一单链表头指针pHead和一节点指针pToBeDeleted，O(1)时间复杂度删除节点pToBeDeleted: delete
+ *
  */
 public class LinkedListSummary {
 
@@ -126,12 +130,12 @@ public class LinkedListSummary {
 	// 现在只要处理当前node和子问题之间的关系。最后就能圆满解决整个问题。
 	/*
 	 * head 1 -> 2 -> 3 -> 4
-	 * 
+	 *
 	 * head 1-------------- | 4 -> 3 -> 2 // Node reHead =
 	 * reverseListRec(head.next); reHead head.next
-	 * 
+	 *
 	 * 4 -> 3 -> 2 -> 1 // head.next.next = head; reHead
-	 * 
+	 *
 	 * 4 -> 3 -> 2 -> 1 -> null // head.next = null; reHead
 	 */
 	public static Node reverseListRec(Node head) {
@@ -184,7 +188,7 @@ public class LinkedListSummary {
 
 	/**
 	 * 递归打印出倒数第k位的值
-	 * 
+	 *
 	 * @param head
 	 * @param dist
 	 */
@@ -416,7 +420,7 @@ public class LinkedListSummary {
 	 * 两个链表均从头节点开始，假设len1大于len2
 	 * ，那么将第一个链表先遍历len1-len2个节点，此时两个链表当前节点到第一个相交节点的距离就相等了，然后一起向后遍历，直到两个节点的地址相同。
 	 * 时间复杂度，O(len1+len2)
-	 * 
+	 *
 	 * ---- len2 |__________ | --------- len1 |---|<- len1-len2
 	 */
 	public static Node getFirstCommonNode(Node head1, Node head2) {
