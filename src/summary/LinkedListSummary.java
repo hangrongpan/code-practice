@@ -23,7 +23,9 @@ import java.util.Stack;
  */
 public class LinkedListSummary {
 	public static void main(String[] args) {
-		//test
+		//testd
+
+		
 		Node n1 = new Node(1);
 		Node n2 = new Node(2);
 		Node n3 = new Node(3);
