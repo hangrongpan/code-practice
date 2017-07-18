@@ -110,7 +110,7 @@ public class BinaryTreeSummary {
 		if (root == null) {
 			return 0;
 		}
-
+		// 需要变化当前params的值--recusive
 		int leftDepth = getDepthRec(root.left);
 		int rightDepth = getDepthRec(root.right);
 		return Math.max(leftDepth, rightDepth) + 1;
