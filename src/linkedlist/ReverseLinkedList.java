@@ -1,3 +1,7 @@
+package linkedlist;
+
+import linkedlist.ListNode;
+
 public class ReverseLinkedList {
 	
 	/* use three pointer to slide through the linked list.
@@ -7,7 +11,7 @@ public class ReverseLinkedList {
 	*
 	*/
 
-	public void reverseLinkedList(ListNode head) {
+	public ListNode reverseLinkedList(ListNode head) {
 		if (head == null || head.next == null) {
 			return head;
 		}
