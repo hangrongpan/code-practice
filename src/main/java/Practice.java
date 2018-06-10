@@ -132,4 +132,19 @@ public class Practice {
             System.out.println(pq.poll());
         }
     }
+
+    @Test
+    public void testArray() {
+        int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 9, 10};
+        int index = Arrays.binarySearch(a, 9);
+        System.out.println(index);
+        Arrays.fill(a, 10);
+        printArray(a);
+    }
+
+    private static void printArray(int[] a) {
+        for(int x : a) {
+            System.out.printf("%d ", x);
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package main.java.parking;
+package ood.parking;
 
 import java.util.ArrayList;
 import java.util.List;

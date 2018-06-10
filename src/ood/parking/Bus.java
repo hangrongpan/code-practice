@@ -1,4 +1,4 @@
-package main.java.parking;
+package ood.parking;
 
 public class Bus extends Vehicle {
 
